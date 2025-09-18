@@ -406,6 +406,8 @@ mysql> SELECT SUM(age) AS total_age FROM people GROUP BY gender;
 +-----------+
 3 rows in set (0.00 sec)
 
+--Q1 
+
 mysql> CREATE TABLE departments (
     ->     department_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     ->     name VARCHAR(20) NOT NULL,
@@ -453,6 +455,9 @@ mysql> desc departments;
 +---------------+--------------+------+-----+-------------------+-----------------------------------------------+
 4 rows in set (0.01 sec)
 
+
+--Q2
+
 mysql> ALTER TABLE people
     -> ADD COLUMN department_id INT(10) UNSIGNED AFTER email;
 Query OK, 0 rows affected, 1 warning (0.02 sec)
@@ -472,6 +477,8 @@ mysql> DESC people;
 | updated_at    | timestamp        | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
 +---------------+------------------+------+-----+-------------------+-----------------------------------------------+
 8 rows in set (0.01 sec)
+
+--Q3
 
 mysql> INSERT INTO departments (name) VALUES 
     -> (‘営業‘),
@@ -625,6 +632,7 @@ mysql> SELECT * FROM people;
 +-----------+-----------------------+------------------------------+---------------+------+--------+---------------------+---------------------+
 15 rows in set (0.00 sec)
 
+--Q4
 mysql> UPDATE people
     -> SET department_id = 1
     -> WHERE person_id = 1;
@@ -671,6 +679,8 @@ mysql> SELECT * FROM people;
 +-----------+-----------------------+------------------------------+---------------+------+--------+---------------------+---------------------+
 15 rows in set (0.00 sec)
 
+--Q6
+
 mysql> SELECT name, age
     -> FROM people
     -> WHERE gender = 1
@@ -683,7 +693,7 @@ mysql> SELECT name, age
 +--------------------+------+
 2 rows in set (0.00 sec)
 
-mysql> -- Q6: peopleテーブルからdepartment_idが1のレコードを取得し、
+-- Q6: peopleテーブルからdepartment_idが1のレコードを取得し、
 mysql> -- name, email, ageカラムを抽出。created_atカラムで昇順に並べ替え。
 mysql> SELECT
     ->   `name`, `email`, `age`
@@ -705,6 +715,8 @@ mysql> SELECT
 +--------------------+---------------------------+------+
 6 rows in set (0.00 sec)
 
+--Q7
+
 mysql> SELECT name
   -> FROM people
   -> WHERE (age BETWEEN 20 AND 29 AND gender = 2)
@@ -716,6 +728,8 @@ mysql> SELECT name
 | 福田だいすけ    |
 +--------------------+
 2 rows in set (0.00 sec)
+
+--Q8
 
 mysql> SELECT *
   -> FROM people
@@ -733,6 +747,8 @@ mysql> SELECT *
 +-----------+--------------------+---------------------------+---------------+------+--------+---------------------+---------------------+
 6 rows in set (0.00 sec)
 
+--Q9
+
 mysql> SELECT AVG(age) AS average_age
   -> FROM people
   -> WHERE department_id = 2
@@ -743,6 +759,8 @@ mysql> SELECT AVG(age) AS average_age
 |   34.0000 |
 +-------------+
 1 row in set (0.00 sec)
+
+--Q10
 
 mysql> SELECT 
   ->   p.name,
@@ -776,6 +794,8 @@ mysql> SELECT
 | 高橋美咲       | 開発      | reports0010  |
 +-----------------------+-----------------+----------------+
 20 rows in set (0.00 sec)
+
+--Q11
 
 mysql> SELECT p.name
   -> FROM people p
