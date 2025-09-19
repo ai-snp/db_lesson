@@ -21,15 +21,15 @@ INSERT INTO departments (name) VALUES
 INSERT INTO people (name, email, department_id)
 VALUES
 (‘山田太郎‘, 'yamada.taro@example.com', 1),
-    -> (‘佐藤花子’, 'sato.hanako@example.com', 1),
-    -> (‘鈴木次郎’, 'suzuki.jiro@example.com', 1),
-    -> (‘高橋美咲’, 'takahashi.misaki@example.com', 2),
-    -> (‘田中健’, 'tanaka.ken@example.com', 2),
-    -> (‘伊藤梨花’, 'ito.rika@example.com', 2),
-    -> (‘中村亮’, 'nakamura.ryo@example.com', 2),
-    -> (‘小林恵子’, 'kobayashi.keiko@example.com', 3),
-    -> (‘加藤雄大’, 'kato.yudai@example.com', 4),
-    -> (‘松本彩’, 'matsumoto.aya@example.com', 5);
+(‘佐藤花子’, 'sato.hanako@example.com', 1),
+(‘鈴木次郎’, 'suzuki.jiro@example.com', 1),
+(‘高橋美咲’, 'takahashi.misaki@example.com', 2),
+(‘田中健’, 'tanaka.ken@example.com', 2),
+(‘伊藤梨花’, 'ito.rika@example.com', 2),
+(‘中村亮’, 'nakamura.ryo@example.com', 2),
+(‘小林恵子’, 'kobayashi.keiko@example.com', 3),
+(‘加藤雄大’, 'kato.yudai@example.com', 4),
+(‘松本彩’, 'matsumoto.aya@example.com', 5);
 
 
 INSERT INTO reports (person_id, content)
